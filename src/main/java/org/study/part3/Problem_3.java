@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Problem_1_3 {
+public class Problem_3 {
     public static void main(String[] args) throws IOException {
         // BufferedReader : 키보드에서 입력을 받을 때 사용하는 클래스
         // System.in 을 이용해서 키보드 입력을 받음

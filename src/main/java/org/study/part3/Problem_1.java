@@ -2,7 +2,7 @@ package org.study.part3;
 
 import java.util.Scanner;
 
-public class Problem_1_1 {
+public class Problem_1 {
 
     public static void main(String[] args) {
         // 1. Scanner 객체를 생성해 키보드 입력을 받을 준비를 한다.

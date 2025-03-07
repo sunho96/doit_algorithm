@@ -2,7 +2,7 @@ package org.study.part3;
 
 import java.util.Scanner;
 
-public class Problem_1_2 {
+public class Problem_2 {
     // 나의 풀이
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

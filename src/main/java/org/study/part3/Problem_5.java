@@ -2,7 +2,7 @@ package org.study.part3;
 
 import java.util.Scanner;
 
-public class Problem_1_5 {
+public class Problem_5 {
     public static void main(String[] args) {
         // 나머지 합 구하기, 구간합
         // 연속된 숫자들의 합이 특정 숫자(M)로 나누어 떨어지는 경우를 찾는 프로그램
