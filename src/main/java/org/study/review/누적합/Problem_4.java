@@ -1,4 +1,4 @@
-package org.study.review;
+package org.study.review.누적합;
 
 import java.io.BufferedReader;
 import java.io.IOException;
