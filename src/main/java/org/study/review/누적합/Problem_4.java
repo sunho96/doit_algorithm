@@ -11,38 +11,28 @@ public class Problem_4 {
 
         StringTokenizer st = new StringTokenizer(bf.readLine());
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
 
-        // 2차원 배열 선언
-       /* long[][] S = new long[N+1][N+1];
-        for (int i =1; i <= N; i++) {
+        int[][] arr = new int[n+1][n+1];
+        for(int i=1; i <=n; i++) {
             st = new StringTokenizer(bf.readLine());
-            for (int j = 1; j <= N; j++) {
-                S[i][j] = Integer.parseInt(st.nextToken());
-            }
-        }
-*/
-        // 2차원 합배열 생성
-        long[][] table = new long[N+1][N+1];
-        for (int i =1; i <= N; i++) {
-            st = new StringTokenizer(bf.readLine());
-            for (int j = 1; j <= N; j++) {
-                // S[i][j] = S[i][j-1] + S[i-1][j] - S[i-1][j-1] + A[i][j]
-                int value = Integer.parseInt(st.nextToken());
-                table[i][j] = table[i][j-1] + table[i-1][j] - table[i-1][j-1] + value;
+            for(int j=1; j<=n; j++){
+                arr[i][j] = arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1]+ Integer.parseInt(st.nextToken());
             }
         }
 
-        // 2차원 배열 구간합
-        for (int i = 0; i < M; i++) {
-            // =[x2]][y2] - [x1 -1][y2] - [x2][y1-1] -[x1-1][y1-1]
+        for(int i=0; i <m; i++) {
             st = new StringTokenizer(bf.readLine());
+
             int x1 = Integer.parseInt(st.nextToken());
             int y1 = Integer.parseInt(st.nextToken());
             int x2 = Integer.parseInt(st.nextToken());
             int y2 = Integer.parseInt(st.nextToken());
-            System.out.println(table[x2][y2] - table[x1 -1][y2] - table[x2][y1-1] + table[x1-1][y1-1]);
+            // arr[x2][y2] - arr[x1-1][y2] - arr[x2][y1-1] + arr[x1-1][y1-1];
+            System.out.println(arr[x2][y2] - arr[x1-1][y2] - arr[x2][y1-1] + arr[x1-1][y1-1]);
         }
+
+
     }
 }
